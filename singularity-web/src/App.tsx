@@ -1,6 +1,7 @@
 import MatrixBackground from './components/MatrixBackground';
 import GitHubDocViewer from './components/GitHubDocViewer';
 import HardcodedLinks from './components/HardcodedLinks'; // Import the new component
+import AudioPlayer from './components/AudioPlayer'; // Import the new AudioPlayer component
 import './index.css';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
@@ -19,6 +20,7 @@ function App() {
         <GitHubDocViewer filePath="ROADMAP.md" />
         <HardcodedLinks /> {/* Add the HardcodedLinks component here */}
       </div>
+      <AudioPlayer /> {/* Add the AudioPlayer component here */}
     </div>
   );
 }

@@ -46,8 +46,15 @@ const MatrixBackground: React.FC = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+    // Helper function to get document height
+    const getDocumentHeight = () => Math.max(
+      document.body.scrollHeight, document.documentElement.scrollHeight,
+      document.body.offsetHeight, document.documentElement.offsetHeight,
+      document.body.clientHeight, document.documentElement.clientHeight
+    );
+
     let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    let height = (canvas.height = getDocumentHeight());
     let columns = Math.floor(width / 20);
     let drops: number[] = [];
 
@@ -65,7 +72,7 @@ const MatrixBackground: React.FC = () => {
 
     const handleResize = () => {
       width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
+      height = canvas.height = getDocumentHeight();
       columns = Math.floor(width / fontSize);
       drops = [];
       for (let i = 0; i < columns; i++) {
@@ -85,7 +92,7 @@ const MatrixBackground: React.FC = () => {
     <canvas
       ref={canvasRef}
       style={{
-        position: 'absolute',
+        position: 'fixed', // Changed from absolute to fixed
         top: 0,
         left: 0,
         zIndex: 0,
