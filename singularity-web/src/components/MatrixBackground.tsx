@@ -5,7 +5,7 @@ const MatrixBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { connected } = useWallet(); // Get connection status from useWallet hook
 
-  const currentColor = connected ? '#FF4500' : '#0F0'; // Red-orange for connected, green for disconnected
+  const currentColor = connected ? '#FF4500' : '#0000FF'; // Red-orange for connected, blue for disconnected
 
   const draw = useCallback(
     (
