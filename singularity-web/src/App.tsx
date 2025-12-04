@@ -1,4 +1,3 @@
-import React from 'react';
 import MatrixBackground from './components/MatrixBackground';
 import GitHubDocViewer from './components/GitHubDocViewer';
 import './index.css';
