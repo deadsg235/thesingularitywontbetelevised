@@ -4,7 +4,12 @@
   "private": true,
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "@solana/web3.js": "^1.91.0",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-phantom": "^0.9.23",
+    "@solana/wallet-adapter-react-ui": "^0.9.35"
   },
   "devDependencies": {
     "@types/react": "^18.2.0",
@@ -15,7 +20,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "@types/node": "^20.12.7"
   },
   "scripts": {
     "dev": "vite",
