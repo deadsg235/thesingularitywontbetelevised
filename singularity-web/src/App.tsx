@@ -1,6 +1,5 @@
 import MatrixBackground from './components/MatrixBackground';
 import GitHubDocViewer from './components/GitHubDocViewer';
-import RelevantLinks from './components/RelevantLinks'; // Import the new component
 import './index.css';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 
@@ -17,7 +16,6 @@ function App() {
         <GitHubDocViewer filePath="README.md" />
         <GitHubDocViewer filePath="ARCHITECTURE.md" />
         <GitHubDocViewer filePath="ROADMAP.md" />
-        <RelevantLinks /> {/* Add the RelevantLinks component here */}
       </div>
     </div>
   );
